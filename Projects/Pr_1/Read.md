@@ -36,11 +36,14 @@ Perfect for learning:
 
 # 📌 Code Preview
 
-```python
+'''python
 name=input("please enter your name:");
 age=int(input("please enter your age:"));
-height=float(input("please enter your height in meters:"));
+height=float(input("please enter your height in meters:"));....'''
 
-👩‍💻 Author
-Janhavi Rathore
-Python Beginner Project 🚀
+---
+
+# 👩‍💻 Author
+
+- Janhavi Rathore
+- Python Beginner Project 🚀
