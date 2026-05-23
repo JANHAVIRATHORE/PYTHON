@@ -34,15 +34,6 @@ Perfect for learning:
 
 ---
 
-# 📌 Code Preview
-
-'''python
-name=input("please enter your name:");
-age=int(input("please enter your age:"));
-height=float(input("please enter your height in meters:"));....'''
-
----
-
 # 👩‍💻 Author
 
 - Janhavi Rathore
