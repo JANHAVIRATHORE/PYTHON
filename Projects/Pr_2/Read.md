@@ -65,19 +65,6 @@ This is a powerful beginner-to-intermediate level Python project that combines:
 
 ---
 
-# 📌 Program Highlights
-
-## 🎯 Match-Case Example
-
-'''python
-match choice:
-    case 1:
-        print("Pattern Generator")
-    case 2:
-        print("Number Analyzer")...'''
-
----
-
 # 👩‍💻 Author
 
 - Janhavi Rathore
