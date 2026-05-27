@@ -2,6 +2,7 @@
    function,then displays a formatted message like:
    -"Hello, <name>! At <age>,enjoying <hobby> sounds fun!"'''
 
+print("\n")
 name=input("Enter your name:");
 age=int(input("Enter your age:"));
 hobby=input("Enter your hobby:");

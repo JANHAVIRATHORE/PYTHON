@@ -11,6 +11,5 @@ print("Age:",age,"(Type:",type(age),",Memory Addresss:",id(age),")");
 print("Height:",height,"(Type:",type(height),",Memory Addresss:",id(height),")");
 print("Favourite Number:",no,"(Type:",type(no),",Memory Addresss:",id(no),")");
 
-print("\nyour Birth year is approximately:",2026-age,"Based on your year your age is",age);
-
-print("\nThank you for using the personal Data Collector.","\nGoodbye!");
+print("\nyour Birth year is approximately:",2023-age,"Based on your year your age is,age");
+print("\nThank you for using the personal Data Collector.\n","Goodbye!");
