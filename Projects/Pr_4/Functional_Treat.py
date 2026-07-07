@@ -90,7 +90,11 @@ while True:
         print("\nFactorial is selected\n");
         print(f"\nfunction name:fact()={fact.__doc__}\n");
         num=int(input("Enter a number to calculate its Factorial:"));
-        print(f"Factorial of {num} is:{fact(num)}");
+        if num>0:
+            print(f"Factorial of {num} is: {fact(num)}");
+
+        else:
+            print("factorial of 0 not possible:");
     
     elif choice==4:
      while True:

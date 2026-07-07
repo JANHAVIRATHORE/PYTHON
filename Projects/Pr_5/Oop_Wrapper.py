@@ -41,9 +41,9 @@ class developer(employee):
     def __del__(self):
         return super().__del__()
     
-emp=[]
-man=[]
-dev=[]
+employees=[]
+managers=[]
+developers=[]
 
 print("\n-- Python Oop Project: Employee Management System ---\n");
 while True:
@@ -65,7 +65,7 @@ while True:
 
         dobj=developer(nm,age,pro);
         dobj.setInfo(id,sal);
-        dev.append(dobj);
+        developers.append(dobj);
 
     elif choice==2:
         nm=input("Enter Name: ");
@@ -75,7 +75,7 @@ while True:
     
         eobj=employee(nm,age);
         eobj.setInfo(id,sal);
-        emp.append(eobj);
+        employees.append(eobj);
 
     elif choice==3:
         nm=input("Enter Name: ");
@@ -86,7 +86,7 @@ while True:
 
         mobj=manager(nm,age,dep);
         mobj.setInfo(id,sal);
-        man.append(mobj);
+        managers.append(mobj);
         
     elif choice==4:
      while True:
@@ -99,15 +99,15 @@ while True:
         choice=int(input("\nEnter Your choice:"));
 
         if choice==1:
-            for d in dev:
+            for d in developers:
                 d.get_Info();
 
         elif choice==2:
-            for e in emp: 
+            for e in employees: 
                 e.get_Info();
         
         elif choice==3:
-            for m in man:
+            for m in managers:
                 m.get_Info();
 
         elif choice==4:

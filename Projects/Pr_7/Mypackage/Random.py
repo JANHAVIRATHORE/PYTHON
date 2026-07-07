@@ -30,39 +30,40 @@ class otp:
         for i in range(0,6):
             print(random.randint(0,9),end="");
 
-print("\nRandom Data Generation:");
-while True:
-    print("\n1.Generate Random Number");
-    print("2.Generate Random List");
-    print("3.Create Random Password");
-    print("4.Generate Random OTP");
-    print("5.Back to Main Menu");
+def main():
+    print("\nRandom Data Generation:");
+    while True:
+        print("\n1.Generate Random Number");
+        print("2.Generate Random List");
+        print("3.Create Random Password");
+        print("4.Generate Random OTP");
+        print("5.Back to Main Menu");
 
-    choice=int(input("\nEnter Your Choice:"));
+        choice=int(input("\nEnter Your Choice:"));
 
-    if choice==1:
-        num1=int(input("\nEnter First number:"));
-        num2=int(input("Enter Last number:"));
-        num_obj=number(num1,num2);
+        if choice==1:
+            num1=int(input("\nEnter First number:"));
+            num2=int(input("Enter Last number:"));
+            num_obj=number(num1,num2);
 
-    elif choice==2:
-        num=[int(i) for i in input("Enter number (comma-separated):").split(",")];
-        list_obj=List(num);
+        elif choice==2:
+            num=[int(i) for i in input("Enter number (comma-separated):").split(",")];
+            list_obj=List(num);
 
-    elif choice==3:
-        length=int(input("\nEnter Length of Password: "));
-        pass_obj=password(length);
-        print();
-        print("="*50,"\n");
+        elif choice==3:
+            length=int(input("\nEnter Length of Password: "));
+            pass_obj=password(length);
+            print();
+            print("="*50,"\n");
 
-    elif choice==4:
-        otp_obj=otp();
-        print();
-        print("="*50,"\n");
+        elif choice==4:
+            otp_obj=otp();
+            print();
+            print("="*50,"\n");
 
-    elif choice==5:
-        print("="*50,"\n");
-        break;
+        elif choice==5:
+            print("="*50,"\n");
+            break;
 
-    else:
-        print("Invalid choice!!");
+        else:
+            print("Invalid choice!!");

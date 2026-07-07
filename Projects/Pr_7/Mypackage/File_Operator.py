@@ -82,49 +82,50 @@ class delete:
 
 
 journal=[];
-while True:
-    print("\nWelcome To Personal Journal Manager!");
-    print("Please select an option:");
-    print("\n1.Add a New Entry");
-    print("2.View All Entries");
-    print("3.Serach for an Entry");
-    print("4.Delete All Entries");
-    print("5.Exit");
+def main():
+    while True:
+        print("\nWelcome To Personal Journal Manager!");
+        print("Please select an option:");
+        print("\n1.Add a New Entry");
+        print("2.View All Entries");
+        print("3.Serach for an Entry");
+        print("4.Delete All Entries");
+        print("5.Exit");
 
-    try:
-        choice=int(input("\nUser Input:"));
-        
-        if choice==1:        
-            date=input("\nEnter Date of Journal Entry (YYYY-MM-DD):");
-            time=input("Enter Time of Journal Entry (HH-MM-SS):");    
-            entry= input("Enter Your Journal Entry:");  
+        try:
+            choice=int(input("\nUser Input:"));
+            
+            if choice==1:        
+                date=input("\nEnter Date of Journal Entry (YYYY-MM-DD):");
+                time=input("Enter Time of Journal Entry (HH-MM-SS):");    
+                entry= input("Enter Your Journal Entry:");  
 
-            journal.append(date);
-            journal.append(time);
-            journal.append(entry);
-            addobj=add(date,time,entry)
-            addobj.get_info();
+                journal.append(date);
+                journal.append(time);
+                journal.append(entry);
+                addobj=add(date,time,entry)
+                addobj.get_info();
+                print("="*50);
+
+            elif choice==2:
+                viewobj=read()
+                print("="*50);
+            
+            elif choice==3:
+                word=input("\nEnter a keyword or Date to Search:");
+                sobj=search();
+                sobj.search_info(word);
+                print("="*50);
+
+            elif choice==4:  
+                choose=input("\nAre you sure you want to delete all Entries? (Yes/No):\n").lower();    
+                delobj=delete(choose);  
+                print("="*50);
+
+            elif choice==5:
+                print("\nThank You for using Personal Journal Manager. GoodBye!\n")
+                print("="*50);    
+                break
+        except ValueError:
+            print("\nInvalid Option! Please select a valid option from the menu.\n");
             print("="*50);
-
-        elif choice==2:
-            viewobj=read()
-            print("="*50);
-        
-        elif choice==3:
-            word=input("\nEnter a keyword or Date to Search:");
-            sobj=search();
-            sobj.search_info(word);
-            print("="*50);
-
-        elif choice==4:  
-            choose=input("\nAre you sure you want to delete all Entries? (Yes/No):\n").lower();    
-            delobj=delete(choose);  
-            print("="*50);
-
-        elif choice==5:
-            print("\nThank You for using Personal Journal Manager. GoodBye!\n")
-            print("="*50);    
-            break
-    except ValueError:
-        print("\nInvalid Option! Please select a valid option from the menu.\n");
-        print("="*50);

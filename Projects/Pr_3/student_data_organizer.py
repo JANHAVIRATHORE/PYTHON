@@ -42,7 +42,7 @@ In this you can:
             "dob":stu_dob,
             "subject":subject
         }
-        subjects.update(stu_sub);
+        subjects.update(subject);
         student.append(stu_info);
         print("\nStudent Added Successfully!!\n");
         
@@ -69,7 +69,7 @@ In this you can:
                 detail["name"]=input("Enter New Name: ");
                 detail["age"]=int(input("Enter New Age: "));
                 detail["grade"]=input("Enter New grade: ");
-                detail["dob"]=int(input("Enter New Date Of Birth: "));
+                detail["dob"]=input("Enter New Date Of Birth: ");
                 found=True;
                 print("\nNew Detail:\n",detail);
                 print("\nStudent detail updated successfully!!\n");
@@ -93,7 +93,7 @@ In this you can:
             print("\nNo subject's records available!!\n");
             continue;
         else :
-            for sub in subject:
+            for sub in subjects:
                 print(sub,end="\n");
     elif choice==6:
         print("\nThank you for visiting Student Data Organizer!!\nGoodBye (^-^)\n");
@@ -101,5 +101,4 @@ In this you can:
     else:
         print("\nPlease enter a valid choice!\n");
 
-    
     

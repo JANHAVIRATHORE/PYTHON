@@ -34,27 +34,27 @@ class format:
             print("="*50,"\n");
 
 class watch():
-    def __init__(self,start,end):
-        pass
-        # print("\nStopwatch")
-        # print("=" * 40)
+    def __init__(self):
+        
+        print("\nStopwatch")
+        print("=" * 40)
 
-        # input("Press Enter to Start the Stopwatch...")
+        input("Press Enter to Start the Stopwatch...")
 
-        # start_time = datetime.datetime.now()
+        start_time = datetime.datetime.now()
 
-        # print("\nStopwatch Started!")
-        # input("Press Enter to Stop the Stopwatch...")
+        print("\nStopwatch Started!")
+        input("Press Enter to Stop the Stopwatch...")
 
-        # end_time = datetime.datetime.now()
+        end_time = datetime.datetime.now()
 
-        # elapsed_time = end_time - start_time
+        elapsed_time = end_time - start_time
 
-        # print("\n" + "=" * 40)
-        # print(f"Start Time   : {start_time.strftime('%H:%M:%S')}")
-        # print(f"Stop Time    : {end_time.strftime('%H:%M:%S')}")
-        # print(f"Elapsed Time : {elapsed_time}")
-        # print("=" * 40)
+        print("\n" + "=" * 40)
+        print(f"Start Time   : {start_time.strftime('%H:%M:%S')}")
+        print(f"Stop Time    : {end_time.strftime('%H:%M:%S')}")
+        print(f"Elapsed Time : {elapsed_time}")
+        print("=" * 40)
 
 class timer():
     def __init__(self,start):
@@ -66,64 +66,63 @@ class timer():
         print("Time's Up!!");
         print("="*50,"\n");
 
-print("\nDatetime and Time Operations:");
-while True:
-    print("1.Display current date and time.");
-    print("2.Calculate difference between two dates/times.");
-    print("3.Format date into custom format.");
-    print("4.Stopwatch.");
-    print("5.Countdown Timer.");
-    print("6.Back to Main Menu");
+def main():
+    print("\nDatetime and Time Operations:");
+    while True:
+        print("1.Display current date and time.");
+        print("2.Calculate difference between two dates/times.");
+        print("3.Format date into custom format.");
+        print("4.Stopwatch.");
+        print("5.Countdown Timer.");
+        print("6.Back to Main Menu");
 
-    try:
-        choice=int(input("\nEnter Your Choice:"));
-
-        if choice==1:
-            date_obj=date_time();
-
-        elif choice==2:
-         while True:
-            print("1.Calculate difference between two dates.");
-            print("2.Calculate difference between two times.");
-            print("3.Exit.");
+        try:
             choice=int(input("\nEnter Your Choice:"));
-        
+
             if choice==1:
-                date1=input("Enter the first date (YYYY-MM-DD): ");
-                date2=input("Enter the second date (YYYY-MM-DD): ");
+                date_obj=date_time();
 
-                dateobj=diff_date();
-                dateobj.Date(date1,date2);
-                
             elif choice==2:
-                time1=input("Enter the first time (HH:MM:SS): ");
-                time2=input("Enter the second time (HH:MM:SS): ");
+             while True:
+                print("1.Calculate difference between two dates.");
+                print("2.Calculate difference between two times.");
+                print("3.Exit.");
+                choice=int(input("\nEnter Your Choice:"));
+            
+                if choice==1:
+                    date1=input("Enter the first date (YYYY-MM-DD): ");
+                    date2=input("Enter the second date (YYYY-MM-DD): ");
 
-                timeobj=diff_date();
-                timeobj.Time(time1,time2);
+                    dateobj=diff_date();
+                    dateobj.Date(date1,date2);
+                    
+                elif choice==2:
+                    time1=input("Enter the first time (HH:MM:SS): ");
+                    time2=input("Enter the second time (HH:MM:SS): ");
+
+                    timeobj=diff_date();
+                    timeobj.Time(time1,time2);
+
+                elif choice==3:
+                    break; 
+
+                else:
+                    print("Invalid choice!!");
 
             elif choice==3:
-                break; 
+                formate_obj=format();
 
-            else:
-                print("Invalid choice!!");
+            elif choice==4:
+                watch_obj=watch();
 
-        elif choice==3:
-            formate_obj=format();
+            elif choice==5:
+                start=int(input("Enter Starting Time (seconds):"));
+                timer_obj=timer(start);
 
-        elif choice==4:
-            start=input("press enter to start watch:");
-            end=input("press enter to stop watch:");
-            watch_obj=watch(start,end);
+            elif choice==6:
+                print("="*50,"\n");
+                break;
 
-        elif choice==5:
-            start=int(input("Enter Starting Time (seconds):"));
-            timer_obj=timer(start);
-
-        elif choice==6:
-            print("="*50,"\n");
-            break;
-
-    except ValueError:
-        print("\nInvalid Option! Please select a valid option from the menu.\n");
-        print("="*50);
+        except ValueError:
+            print("\nInvalid Option! Please select a valid option from the menu.\n");
+            print("="*50);

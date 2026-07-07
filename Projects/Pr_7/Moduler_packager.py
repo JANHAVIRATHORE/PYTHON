@@ -1,4 +1,8 @@
-import Mypackage
+from Mypackage import Date_Time
+from Mypackage import Mathematical_ope
+from Mypackage import Random
+from Mypackage import File_Operator
+from Mypackage import Explore_module
 import uuid
 
 if __name__=="__main__":
@@ -22,13 +26,13 @@ while True:
         choice=int(input("\nEnter Your Choice:"));
 
         if choice==1:
-            import Mypackage.Date_Time;
+             Date_Time.main() 
 
         elif choice==2:
-            import Mypackage.Mathematical_ope;
+             Mathematical_ope.main()
 
         elif choice==3:
-            import Mypackage.Random;
+            Random.main()
 
         elif choice==4:
             print("\nGenerate Unique Identifiers:\n")
@@ -37,10 +41,11 @@ while True:
             print("="*50);
 
         elif choice==5:
-            import Mypackage.File_Operator;
+            File_Operator.main()
+
 
         elif choice==6:
-            import Mypackage.Explore_module;
+            Explore_module.main()
 
         elif choice==7:
             print("="*50);

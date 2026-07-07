@@ -39,36 +39,38 @@ class read:
             print("\nThe Journal File Does not Exist.Please add a new Entry.\n");
         except FileNotFoundError:
             print("\nNo Journal Entries Found. Start By adding a new entry!\n");
-    
+
 class search:
     def search_info(self,find):
         self.find=find
         found=False
         try:
-            for i,text in enumerate(journal):
-                if self.find in text:
+            file= open("Personal_Journal.txt","r");
+            content=file.readlines();
+            file.close();
+
+            for line in content:
+                if self.find in line:
                     print("\nMatching Entries:");
                     print("-------------------------------------------------------------------------------------------------------------------------------------------------------\n");
                     print("Date \t\t Time \t\t\t Entry");
-                    print(journal[i-2],end="\t");
-                    print(journal[i-1],end="\t\t ");
-                    print(text); 
+                    print(line,end="");
                     found=True
             if found==False: 
-                print(f"\nNo Entries were found for the keyword: {word}\n"); 
+                print(f"\nNo Entries were found for the keyword: {self.find}\n"); 
         except Exception:
-            print(f"\nNo Entries were found for the keyword: {word}\n");
+            print(f"\nError Occur!\n");
        
 class delete:
     def __init__(self,ans):
         self.answer=ans
         try:
             if self.answer=="yes":
-                file=open("Personal_Journal.txt","w");
+                file=open("Personal_Journal.txt","+w");
                 journal.clear();
                 file.close();
                 print("\nAll the Journal Entries have been Deleted.\n")
-        except IndexError:
+        except FileNotFoundError:
             print("\nNo Journal Entries to Delete.\n");
         except Exception:
             print("\nError No Journal Found\n")
