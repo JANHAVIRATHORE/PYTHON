@@ -386,9 +386,9 @@ This project demonstrates practical use of:
 
 ## Author
 
-**Sales Data Analyzer Project**
+**Janhavi Rathore**
 
-Built as a Python Data Analysis learning project using Pandas, NumPy, Matplotlib, and Seaborn.
+Python Programming Project 🚀
 
 ---
 
