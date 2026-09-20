@@ -288,8 +288,7 @@ This project demonstrates several important NumPy concepts:
 
 ## 👩‍💻 Author
 
-**NumPy Data Analyzer Project**
+**Janhavi Rathore**
 
-Built as a Python/NumPy learning project with an emphasis on Object-Oriented Programming and practical array analysis.
-
+Python Programming Project 🚀
 ---
